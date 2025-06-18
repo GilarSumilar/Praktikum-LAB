@@ -31,12 +31,6 @@ if uploaded_file is not None:
         st.subheader("Statistik Deskriptif Awal:")
         st.dataframe(df_original.describe())
 
-        st.subheader("Informasi Data Awal:")
-        buffer = io.StringIO()
-        df_original.info(buf=buffer)
-        s = buffer.getvalue()
-        st.text(s)
-
     except Exception as e:
         st.error(f"Terjadi kesalahan saat membaca file: {e}")
         df_original = None
