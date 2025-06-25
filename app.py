@@ -14,7 +14,7 @@ import seaborn as sns
 # Konfigurasi halaman Streamlit
 st.set_page_config(layout="wide", page_title="Aplikasi Prediksi Polusi (Regresi)")
 st.title("Aplikasi Prediksi Polusi (Regresi)")
-st.write("Unggah dataset Anda (CSV), lakukan preprocessing, dan prediksi tingkat polusi.")
+st.write("Unggah dataset Anda (CSV) pilih tahun, lakukan preprocessing, dan prediksi tingkat polusi.")
 
 # --- Bagian Upload File ---
 uploaded_file = st.file_uploader("Pilih file CSV", type="csv")
@@ -318,6 +318,6 @@ if df_processed is not None and not df_processed.empty:
 
 else:
     if uploaded_file is None:
-        st.info("Silakan unggah file CSV untuk memulai prediksi polusi.")
+        st.info("Silakan unggah file CSV pilih tahun, untuk memulai prediksi polusi.")
     elif df_original is not None and df_original.empty:
         st.error("Dataset kosong setelah preprocessing. Periksa file CSV Anda.")

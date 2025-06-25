@@ -35,7 +35,7 @@ def run_tutorial():
     st.write(
         """
         - Buka aplikasi Streamlit di browser (setelah menjalankan `streamlit run app.py`).
-        - Klik tombol **"Pilih file CSV"** dan unggah dataset polusi Anda.
+        - Klik tombol **"Pilih file CSV, sesuai tahun yang di inginkan"** dan unggah dataset polusi Anda.
         """
     )
 
