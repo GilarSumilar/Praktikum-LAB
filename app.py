@@ -159,6 +159,14 @@ if df_original is not None:
     s_processed = buffer_processed.getvalue()
     st.text(s_processed)
 
+    st.write("**Jumlah Missing Values per Kolom:**")
+    st.write(df_processed.isna().sum())
+
+    st.write(f"**Jumlah Baris Duplikat:** {df_processed.duplicated().sum()}")
+
+    st.subheader("Statistik Deskriptif Setelah Preprocessing:")
+    st.dataframe(df_processed.describe())
+
 # --- Bagian Prediksi Polusi (Regresi) ---
 if df_processed is not None and not df_processed.empty:
     st.sidebar.header("Pengaturan Prediksi Polusi (Regresi)")
